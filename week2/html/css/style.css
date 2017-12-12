@@ -1,0 +1,29 @@
+p {
+ background-color: mistyrose;
+}
+
+h1 {
+  color: saddlebrown;
+}
+
+body {
+  /*background-color: #FF0000*/
+  background-color: rgb(255, 0, 0)
+}
+
+span, .demoDiv {
+  border: 2px solid green;
+}
+
+span:hover {
+  font-size: 20pt;
+}
+
+#bill{
+  transform: rotate(0deg) scale(1.0);
+  transition: 1s;
+}
+
+#bill:hover {
+  transform: rotate(7200deg) scale(4.0);
+}

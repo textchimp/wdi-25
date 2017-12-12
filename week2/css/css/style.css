@@ -1,0 +1,90 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;  /* 0px  */
+}
+
+/* select all divs which do NOT have the .nav class */
+div:not(.nav) {
+  border: 1px solid red;
+}
+
+h1 {
+  padding: 10px;
+  margin: 20px;
+  border: 2px dashed PeachPuff;
+}
+
+footer{
+  border: 1px solid red;
+}
+
+nav > div {
+  display: inline-block;
+  background-color: hotpink;
+  padding: 10px;
+}
+
+nav .left {
+  width: 70%;
+}
+
+nav .right {
+  width: 30%;
+  text-align: right;
+}
+
+.inlineExample {
+  display: inline;
+  width: 400px;   /*  ignored */
+}
+
+.blockExample {
+  display: block;
+  width: 400px;
+}
+
+.inlineBlockExample {
+  display: inline-block;
+  width: 400px;
+}
+
+div.box {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  border: 1px solid black;
+}
+
+.staticExample {
+  position: static;
+  left: 200px;   /* ignored for static */
+  top: 200px;    /* ignored */
+}
+
+.relativeExample {
+  position: relative;
+  left: -5px;
+  top: 149px;
+}
+
+.absoluteExample {
+  position: absolute;
+  top: 100px;
+  right: 50px; /* offset starting from the right edge */
+}
+
+.fixedExample {
+  position: fixed;
+  top: 500px;
+  right: 100px;
+}
+
+p {
+  color: lavender;
+}

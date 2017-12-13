@@ -5,4 +5,5 @@ body {
 
 #bill{
   opacity: 1.0;
+  position: relative;
 }

@@ -1,0 +1,11 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.blob {
+  position: absolute;  /* so our offsets work */
+  border-radius: 50%;  /* turns a square div into a nice circle */
+}

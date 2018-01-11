@@ -1,0 +1,26 @@
+
+<marquee>
+  <h2>Introducing
+    <%= @animal["first_name"] %>
+    <%= @animal["last_name"] %>
+  </h2>
+</marquee>
+
+<strong>Roundness:</strong> <%= @animal["roundness"] %>
+<br>
+<strong>Description:</strong> <%= @animal["description"] %>
+<br>
+<strong>Species:</strong> <%= @animal["species"] %>
+<br>
+<strong>Alive:</strong>
+<%= (@animal["alive"] == 1) ? "Yes" : "No" %>
+<br>
+<strong>Age:</strong> <%= @animal["age"] %>
+<br>
+
+<img src="<%= @animal["image_url"] %>">
+<br>
+<br>
+<a href="/animals/<%= @animal["id"] %>/edit">Edit this guy</a>
+|
+<a href="/animals/<%= @animal["id"] %>/delete">Delete</a>

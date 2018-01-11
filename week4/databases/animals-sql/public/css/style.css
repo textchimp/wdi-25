@@ -1,0 +1,9 @@
+body {
+  background-color: rgb(159, 195, 39);
+  font-family: 'Lucida', 'sans-serif';
+  color: DarkSalmon;
+}
+
+img {
+  max-width: 400px;
+}

@@ -1,0 +1,23 @@
+<hr>
+<a href="/admirers/new">Add a New Admirer</a>
+<hr>
+
+<h2>Animal Lovers Club</h2>
+
+
+<% @result.each do |admirer| %>
+
+  <strong>Name:</strong>
+  <a href="/admirers/<%= admirer.id %>">
+    <%= admirer.name %>
+  </a>
+  <br>
+
+  <a href="/admirers/<%= admirer.id %>">
+    <img src="<%= admirer.image_url %>">
+  </a>
+
+
+  <hr>
+
+<% end %>

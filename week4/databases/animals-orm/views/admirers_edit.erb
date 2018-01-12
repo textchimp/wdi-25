@@ -1,0 +1,18 @@
+
+<h2>Edit
+  <%= @admirer.name %>
+</h2>
+<hr>
+
+<!-- POST to e.g. /admirers/5 to submit form -->
+<form action="/admirers/<%= @admirer.id %>" method="post">
+
+Name: <input type="text" name="name" value="<%= @admirer.name %>"><br>
+Location: <input type="text" name="location" value="<%= @admirer.location %>"><br>
+admiration: <input type="text" name="admiration" value="<%= @admirer.admiration %>"><br>
+Image URL: <input type="text" name="image_url" value="<%= @admirer.image_url %>"><br>
+Animal ID: <input type="text" name="animal_id" value="<%= @admirer.animal_id %>"><br>
+
+  <button>Update Admirer</button>
+
+</form>

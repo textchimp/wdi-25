@@ -1,0 +1,23 @@
+
+<marquee>
+  <h2>Introducing
+    <%= @admirer.name %>
+  </h2>
+</marquee>
+
+<strong>Location:</strong> <%= @admirer.location %>
+<br>
+<strong>Admiration %:</strong> <%= @admirer.admiration %>
+<br>
+<strong>Admired Animal:</strong>
+<a href="/animals/<%= @admirer.animal.id %>">
+  <%= @admirer.animal.first_name %>
+  <%= @admirer.animal.last_name %>
+</a>
+<br>
+<img src="<%= @admirer.image_url %>">
+<br>
+<br>
+<a href="/admirers/<%= @admirer.id %>/edit">Edit this guy</a>
+|
+<a href="/admirers/<%= @admirer.id %>/delete">Delete</a>

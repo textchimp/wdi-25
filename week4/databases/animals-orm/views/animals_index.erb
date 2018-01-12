@@ -1,0 +1,23 @@
+<hr>
+<a href="/animals/new">Add a New Boy</a>
+<hr>
+
+<h2>Roll Call of the Round Ones</h2>
+
+
+<% @result.each do |animal| %>
+
+  <strong>Name:</strong>
+  <a href="/animals/<%= animal.id %>">
+    <%= animal.first_name %> <%= animal.last_name %>
+  </a>
+  <br>
+
+  <a href="/animals/<%= animal.id %>">
+    <img src="<%= animal.image_url %>">
+  </a>
+
+
+  <hr>
+
+<% end %>

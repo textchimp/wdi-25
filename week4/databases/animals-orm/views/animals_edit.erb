@@ -1,0 +1,22 @@
+
+<h2>Edit
+  <%= @animal.first_name %>
+  <%= @animal.last_name %>
+</h2>
+<hr>
+
+<%# ERB comment %>
+
+<!-- POST to e.g. /animals/5 to submit form -->
+<form action="/animals/<%= @animal.id %>" method="post">
+First Name: <input type="text" name="first_name" value="<%= @animal.first_name %>"><br>
+Last Name: <input type="text" name="last_name" value="<%= @animal.last_name %>"><br>
+Roundness: <input type="text" name="roundness" value="<%= @animal.roundness %>"><br>
+Image URL: <input type="text" name="image_url" value="<%= @animal.image_url %>"><br>
+Description: <input type="text" name="description" value="<%= @animal.description %>"><br>
+Species: <input type="text" name="species" value="<%= @animal.species %>"><br>
+Alive?: <input type="text" name="alive" value="<%= @animal.alive %>"><br>
+Age: <input type="text" name="age"  value="<%= @animal.age %>"><br>
+
+  <button>Update Animal</button>
+</form>

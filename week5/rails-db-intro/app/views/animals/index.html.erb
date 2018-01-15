@@ -1,0 +1,7 @@
+<h1>Animals Index</h1>
+<hr>
+<ul>
+  <% @animals.each do |animal| %>
+    <li> <%= animal.name %> (<%= animal.age %>) </li>
+  <% end %>
+</ul>

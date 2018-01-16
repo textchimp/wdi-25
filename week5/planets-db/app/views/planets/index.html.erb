@@ -1,0 +1,13 @@
+
+<h1>Guide to the Solar System</h1>
+
+<ul>
+  <% @planets.each do |p| %>
+    <li>
+      <%= link_to p.name, p  %>
+      <%#= link_to p.name, planet_path( p ) %>
+      <%#= link_to p.name, planet_path( p.id ) %>
+      <!-- <a href="/planets/<%= p.id %>"><%= p.name %></a> -->
+    </li>
+  <% end %>
+</ul>

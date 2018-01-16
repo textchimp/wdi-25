@@ -1,0 +1,15 @@
+
+<h1>Planet: <%= @planet.name %></h1>
+<hr>
+<p>Orbit: <%= @planet.orbit %> earth orbits</p>
+<p>Moons: <%= @planet.moons %></p>
+<p>Roundness: <%= @planet.roundness %></p>
+
+<% if @planet.image.present? %>
+  <img src="<%= @planet.image %>" alt="">
+<% end %>
+
+<hr>
+<%= link_to 'Edit', "/planets/#{ @planet.id }/edit" %>
+|
+<%= link_to 'Delete', "/planets/#{ @planet.id }/delete" %>

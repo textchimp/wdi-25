@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StocksAndBooks</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   <% if @cl_debugstring %>
+      <script>
+        var cl = <%= @cl_debugstring.html_safe %>;
+        console.log( cl );
+      </script>
+   <% end %>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<h1>Book Search Results</h1>
+<hr>
+
+<% @results.each do |book| %>
+
+  <%= book['volumeInfo']['title'] %>
+  <br>
+
+<% end %>

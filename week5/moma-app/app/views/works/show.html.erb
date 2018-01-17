@@ -1,0 +1,16 @@
+
+<h2><em><%= @work.title %></em>, <%= @work.year %></h2>
+<h3>
+  <%= link_to @work.artist.name, @work.artist %>  <!-- artist_path( @work.artist.id ) -->
+</h3>
+
+
+<%= link_to 'Edit', "/works/#{ @work.id }/edit" %>
+|
+<%= link_to 'Delete', "/works/#{ @work.id }/delete" %>
+
+<p><strong>Medium</strong>: <%= @work.medium %></p>
+<p><strong>Style</strong>: <%= @work.style %></p>
+
+<%= image_tag @work.image %>
+<!-- <img src="<%= @work.image %>" alt=""> -->

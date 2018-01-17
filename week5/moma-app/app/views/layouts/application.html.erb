@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Moma</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <h1>Museum of Modern Art</h1>
+    <nav>
+      <%= link_to 'Artists', artists_path %>
+      |
+      <%= link_to 'Works', works_path %>
+    </nav>
+    <hr>
+    <%= yield %>
+    <hr>
+    &copy; Textchimp Productions 2018
+  </body>
+</html>

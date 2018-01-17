@@ -1,0 +1,14 @@
+
+<h2>All Works</h2>
+
+<ul>
+  <% @works.each do |work| %>
+
+    <li>
+      <em><%= link_to work.title, work_path( work ) %></em>
+      <!-- <em><%= link_to work.title, work %></em> ALSO WORKS AS ABOVE! -->
+      , <%= work.year %>
+    </li>
+
+  <% end %>
+</ul>

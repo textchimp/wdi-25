@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: artists
+#
+#  id          :integer          not null, primary key
+#  name        :text
+#  nationality :text
+#  dob         :date
+#  period      :text
+#  image       :text
+#  roundness   :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  nationality: MyText
+  dob: 2018-01-17
+  period: MyText
+  image: MyText
+  roundness: MyText
+
+two:
+  name: MyText
+  nationality: MyText
+  dob: 2018-01-17
+  period: MyText
+  image: MyText
+  roundness: MyText

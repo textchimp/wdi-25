@@ -1121,3 +1121,18 @@ Processing by PlanetsController#show as HTML
 Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "planets" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "a"], ["created_at", "2018-01-16 09:32:41.077039"], ["updated_at", "2018-01-16 09:32:41.077039"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "planets" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "b"], ["created_at", "2018-01-16 09:32:41.094638"], ["updated_at", "2018-01-16 09:32:41.094638"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/planets" for 127.0.0.1 at 2018-01-16 23:33:22 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  Rendered planets/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 236ms (Views: 225.3ms | ActiveRecord: 0.7ms)
+
+

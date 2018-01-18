@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TunrWdi25</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <h1>Tunr Music Database</h1>
+    <hr>
+    <nav>
+      <% if @current_user.present? %>
+         <%= @current_user.name %>
+         |
+         <%= link_to 'Logout', login_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Login', login_path %>
+      <% end %>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

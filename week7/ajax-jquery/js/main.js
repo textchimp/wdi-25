@@ -40,7 +40,10 @@ $(document).ready(function(){
           $('<p>').html(elem.volumeInfo.authors.join(', ')).appendTo('#results');
         }
 
-        $('<img>').attr('src', elem.volumeInfo.imageLinks.thumbnail).appendTo('#results');
+        // Only show thumbnail if it's set
+        if( elem.volumeInfo.imageLinks && elem.volumeInfo.imageLinks.thumbnail ){
+          $('<img>').attr('src', elem.volumeInfo.imageLinks.thumbnail).appendTo('#results');
+        }
 
       });
 

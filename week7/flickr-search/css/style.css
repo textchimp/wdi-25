@@ -1,0 +1,12 @@
+body{
+  background-color: : #ccc;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+}
+
+img {
+  padding: 6px;
+}

@@ -3,7 +3,9 @@ console.log('Loaded!');
 $(document).ready(function(){
 
   $('#search').on('click', function(e){
+
     e.preventDefault();
+
     let query = $('#query').val();
     console.log(query);
     $('#results').empty();
@@ -24,6 +26,9 @@ $(document).ready(function(){
     // $.getJSON('https://www.googleapis.com/books/v1/volumes?q=title:' + query)
     // $.post('https://www.googleapis.com/books/v1/volumes?q=title:' + query)
 
+
+    // $.ajax().done(f).fail(f)
+
     $.ajax({
       url: 'https://www.googleapis.com/books/v1/volumes',
       data: {
@@ -31,6 +36,10 @@ $(document).ready(function(){
       }
     })
     .done(function(data){
+
+
+      console.log(data);
+      debugger;
 
       data.items.forEach(function(elem){
         $('<h3>').html(elem.volumeInfo.title).appendTo('#results');
@@ -41,9 +50,9 @@ $(document).ready(function(){
         }
 
         // Only show thumbnail if it's set
-        if( elem.volumeInfo.imageLinks && elem.volumeInfo.imageLinks.thumbnail ){
-          $('<img>').attr('src', elem.volumeInfo.imageLinks.thumbnail).appendTo('#results');
-        }
+        // if( elem.volumeInfo.imageLinks && elem.volumeInfo.imageLinks.thumbnail ){
+        //   $('<img>').attr('src', elem.volumeInfo.imageLinks.thumbnail).appendTo('#results');
+        // }
 
       });
 

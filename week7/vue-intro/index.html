@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/vue.js"></script>
+</head>
+<body>
+  <h1>Vue Intro</h1>
+
+  <div id="app">
+    <strong>{{ message }}</strong>
+
+    <button v-on:click="reverseMessage">Reverse message</button>
+
+   <br>
+   <br>
+   Two-way binding between data and view:<br>
+   1. this input <em>displays</em> the contents of <strong>app.message</strong><br>
+   2. when you type into the input, it <em>updates</em> the contents of <strong>app.message</strong><br>
+   (which triggers a re-render of the DOM, so anywhere else displaying <strong>app.message</strong> will also be updated.)
+
+   <br>
+
+   <input v-model="message">
+   <br>
+
+    <br>
+
+    <span v-bind:title="hoverMessage">{{   anotherMessage }}</span>
+
+    <br>
+    <hr>
+
+    <span v-if="seen">Now you see me....</span>
+
+    <br>
+
+
+   <img v-if="seen" v-bind:src="bill">
+
+   <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+   </ol>
+
+ </div><!-- app -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>

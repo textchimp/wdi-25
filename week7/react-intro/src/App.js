@@ -8,9 +8,9 @@ class App extends Component {
     return (
       <div className="App">
         <HelloWorld />
-        <HelloUser name="Bill" />
-        <HelloUser name="Milo" />
-        <HelloUser name="Grant" />
+        <HelloUser name="Bill" imgWidth="300" imgHeight="200"/>
+        <HelloUser name="Milo" imgWidth="600" imgHeight="300"/>
+        <HelloUser name="Grant" imgWidth="800" imgHeight="500"/>
       </div>
     );
   }

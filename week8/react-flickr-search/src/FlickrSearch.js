@@ -1,12 +1,23 @@
 import React, {Component} from 'react';
 import SearchForm from './SearchForm';
+import Gallery from './Gallery';
 import jsonp from 'jsonp-es6';
 
 class FlickrSearch extends Component {
 
+  constructor(){
+    super();
+
+    this.state = {
+      images: []
+    };
+
+    this.fetchImages = this.fetchImages.bind( this );
+  }
 
   fetchImages( query ){
     console.log('phoned home with:', query);
+    console.log('fetchImages this: ', this );
 
     const flickrURL = 'https://api.flickr.com/services/rest/?jsoncallback=?';
     const flickrParams = {
@@ -17,23 +28,30 @@ class FlickrSearch extends Component {
     };
 
 
-    const generateURL = function( p, size = 'q' ){
-      return `https://farm${p.farm}.staticflickr.com/${p.server}/${p.id}_${p.secret}_${size}.jpg`;
+    const generateURL = function( p ){
+      return `https://farm${p.farm}.staticflickr.com/${p.server}/${p.id}_${p.secret}_q.jpg`;
     };
 
-    const processResults = function( results ){
-      // console.log( results );
+
+    let processResults = (results) => {
+
+      console.log( 'processResults this:', this );
 
       // results.photos.photo.forEach(function( photo ){
       //   console.log( generateURL(photo) );
       // });
 
-      const urls = results.photos.photo.map(function( photo ){
-        return generateURL(photo);
-      })
+      // const urls = results.photos.photo.map(function( photo ){
+      //   return generateURL(photo);
+      // })
+      // ...becomes:
+      // const urls = results.photos.photo.map( (photo) => { return generateURL(photo); } );
+      // ...becomes:
+      // const urls = results.photos.photo.map( photo => generateURL(photo) );
 
-      console.log( urls );
+      const urls = results.photos.photo.map( generateURL );
 
+      this.setState({ images: urls });
 
     };
 
@@ -53,6 +71,13 @@ class FlickrSearch extends Component {
       <div>
         <h1>Flickr Search</h1>
         <SearchForm onSubmit={ this.fetchImages } />
+        { /* !!this.state.images.length && <Gallery images={ this.state.images } /> */ }
+        {
+          this.state.images.length ?
+          <Gallery images={ this.state.images } />
+          :
+          <p><em>Please enter a search term above...</em></p>
+        }
       </div>
     );
   }

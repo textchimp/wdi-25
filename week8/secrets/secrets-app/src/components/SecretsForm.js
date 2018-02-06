@@ -1,18 +1,25 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 
 class SecretsForm extends Component {
   constructor() {
     super();
 
+    this.state = { content: '' };
+
     this._handleSubmit = this._handleSubmit.bind( this );
+    this._handleChange = this._handleChange.bind( this );
   }
 
   _handleSubmit( e ){
     e.preventDefault();
+    // console.log( this.state.content );
+    this.props.onSubmit( this.state.content );
   }
 
   _handleChange( e ){
-    console.log(e.target.value);
+    this.setState({ content: e.target.value });
   }
 
   render(){
@@ -25,5 +32,9 @@ class SecretsForm extends Component {
     )
   }
 }
+
+SecretsForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired
+};
 
 export default SecretsForm;

@@ -23,6 +23,20 @@ class Secrets extends Component {
     this.state = {
       secrets: []
     };
+
+    this.saveSecret = this.saveSecret.bind( this );
+  }
+
+  saveSecret( secret ){
+    // console.log('saveSecret: ', secret);
+
+    // Rails:   Secret.create content: secret
+    axios.post(SERVER_URL, { content: secret }).then( results => {
+      this.setState({
+        secrets: [results.data, ...this.state.secrets ]
+      });
+    });
+
   }
 
   componentWillMount(){
@@ -33,17 +47,20 @@ class Secrets extends Component {
     const fetchSecrets = () => {
       // Make AJAX request to our Rails API endpoint
       // ...and save the response into our component state
-      axios.get(SERVER_URL).then( results => this.setState({secrets: results.data }) );
+      axios.get(SERVER_URL).then( results => this.setState({secrets: results.data.reverse() }) );
+      setTimeout( fetchSecrets, 1000 );
     };
 
     fetchSecrets();
+
+
   }
 
   render(){
     return (
       <div>
         <h1>Tell Us Your Secrets</h1>
-        <SecretsForm  />
+        <SecretsForm onSubmit={ this.saveSecret } />
         <hr />
         <Gallery secrets={ this.state.secrets }/>
       </div>

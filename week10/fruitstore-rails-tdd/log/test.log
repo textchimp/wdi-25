@@ -1,0 +1,1653 @@
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "fruits"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "fruits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "type" varchar)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180221034559)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180221015809),
+(20180221015958);
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-02-21 04:05:19.525951"], ["updated_at", "2018-02-21 04:05:19.525951"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:05:19.572133"], ["updated_at", "2018-02-21 04:05:19.572133"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:07:17.602098"], ["updated_at", "2018-02-21 04:07:17.602098"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:07:32.407014"], ["updated_at", "2018-02-21 04:07:32.407014"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:07:40.427537"], ["updated_at", "2018-02-21 04:07:40.427537"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:07:52.023285"], ["updated_at", "2018-02-21 04:07:52.023285"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:07:55.083246"], ["updated_at", "2018-02-21 04:07:55.083246"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:08:42.413767"], ["updated_at", "2018-02-21 04:08:42.413767"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:08:58.211431"], ["updated_at", "2018-02-21 04:08:58.211431"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:09:42.287339"], ["updated_at", "2018-02-21 04:09:42.287339"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:10:46.423123"], ["updated_at", "2018-02-21 04:10:46.423123"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:11:20.343402"], ["updated_at", "2018-02-21 04:11:20.343402"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:16:22.724621"], ["updated_at", "2018-02-21 04:16:22.724621"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:16:22.730318"], ["updated_at", "2018-02-21 04:16:22.730318"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:18:47.861371"], ["updated_at", "2018-02-21 04:18:47.861371"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:18:47.881157"], ["updated_at", "2018-02-21 04:18:47.881157"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:20:00.518273"], ["updated_at", "2018-02-21 04:20:00.518273"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:20:00.539392"], ["updated_at", "2018-02-21 04:20:00.539392"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:20:37.144117"], ["updated_at", "2018-02-21 04:20:37.144117"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:20:37.161145"], ["updated_at", "2018-02-21 04:20:37.161145"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:20:55.620093"], ["updated_at", "2018-02-21 04:20:55.620093"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:20:55.637115"], ["updated_at", "2018-02-21 04:20:55.637115"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:21:13.339748"], ["updated_at", "2018-02-21 04:21:13.339748"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:21:13.356014"], ["updated_at", "2018-02-21 04:21:13.356014"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:21:46.080432"], ["updated_at", "2018-02-21 04:21:46.080432"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:21:46.097443"], ["updated_at", "2018-02-21 04:21:46.097443"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:22:58.745972"], ["updated_at", "2018-02-21 04:22:58.745972"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:22:58.759847"], ["updated_at", "2018-02-21 04:22:58.759847"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:23:07.824345"], ["updated_at", "2018-02-21 04:23:07.824345"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:23:07.828605"], ["updated_at", "2018-02-21 04:23:07.828605"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "fruits"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "fruits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "type" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "shelves"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "shelves" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180221042451)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180221015809),
+(20180221015958),
+(20180221034559);
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-02-21 04:32:15.522146"], ["updated_at", "2018-02-21 04:32:15.522146"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:32:15.597362"], ["updated_at", "2018-02-21 04:32:15.597362"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:32:15.603769"], ["updated_at", "2018-02-21 04:32:15.603769"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:32:51.635672"], ["updated_at", "2018-02-21 04:32:51.635672"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:32:51.640260"], ["updated_at", "2018-02-21 04:32:51.640260"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:34:00.123004"], ["updated_at", "2018-02-21 04:34:00.123004"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:34:00.128934"], ["updated_at", "2018-02-21 04:34:00.128934"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:34:59.991253"], ["updated_at", "2018-02-21 04:34:59.991253"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:34:59.997202"], ["updated_at", "2018-02-21 04:34:59.997202"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "fruits"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "fruits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "type" varchar, "shelf_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "shelves"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "shelves" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180221043618)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180221015809),
+(20180221015958),
+(20180221034559),
+(20180221042451);
+
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-02-21 04:37:37.259356"], ["updated_at", "2018-02-21 04:37:37.259356"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:37:37.307417"], ["updated_at", "2018-02-21 04:37:37.307417"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:37:37.313126"], ["updated_at", "2018-02-21 04:37:37.313126"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:38:54.663780"], ["updated_at", "2018-02-21 04:38:54.663780"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:38:54.668919"], ["updated_at", "2018-02-21 04:38:54.668919"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:39:16.411477"], ["updated_at", "2018-02-21 04:39:16.411477"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:39:16.415605"], ["updated_at", "2018-02-21 04:39:16.415605"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:39:28.289821"], ["updated_at", "2018-02-21 04:39:28.289821"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:39:28.293854"], ["updated_at", "2018-02-21 04:39:28.293854"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:39:56.792143"], ["updated_at", "2018-02-21 04:39:56.792143"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:39:56.796022"], ["updated_at", "2018-02-21 04:39:56.796022"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:40:33.009525"], ["updated_at", "2018-02-21 04:40:33.009525"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:40:33.012563"], ["updated_at", "2018-02-21 04:40:33.012563"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:40:40.953866"], ["updated_at", "2018-02-21 04:40:40.953866"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name", "type") VALUES (?, ?, ?, ?)[0m  [["created_at", "2018-02-21 04:40:40.957446"], ["updated_at", "2018-02-21 04:40:40.957446"], ["name", "Nashi"], ["type", "Pear"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+Completed 406 Not Acceptable in 49ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:07.730201"], ["updated_at", "2018-02-21 05:02:07.730201"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:07.733391"], ["updated_at", "2018-02-21 05:02:07.733391"], ["name", "Fruit number 1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:07.734993"], ["updated_at", "2018-02-21 05:02:07.734993"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:07.750496"], ["updated_at", "2018-02-21 05:02:07.750496"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:07.751652"], ["updated_at", "2018-02-21 05:02:07.751652"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:07.752468"], ["updated_at", "2018-02-21 05:02:07.752468"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:07.755531"], ["updated_at", "2018-02-21 05:02:07.755531"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:07.756793"], ["updated_at", "2018-02-21 05:02:07.756793"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:07.757727"], ["updated_at", "2018-02-21 05:02:07.757727"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:37.299944"], ["updated_at", "2018-02-21 05:02:37.299944"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:37.304517"], ["updated_at", "2018-02-21 05:02:37.304517"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:37.305544"], ["updated_at", "2018-02-21 05:02:37.305544"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:37.319997"], ["updated_at", "2018-02-21 05:02:37.319997"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:37.320955"], ["updated_at", "2018-02-21 05:02:37.320955"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:37.321641"], ["updated_at", "2018-02-21 05:02:37.321641"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:37.324613"], ["updated_at", "2018-02-21 05:02:37.324613"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:37.325450"], ["updated_at", "2018-02-21 05:02:37.325450"], ["name", "Fruit number 1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:02:37.326244"], ["updated_at", "2018-02-21 05:02:37.326244"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:04:37.686142"], ["updated_at", "2018-02-21 05:04:37.686142"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:04:37.689073"], ["updated_at", "2018-02-21 05:04:37.689073"], ["name", "Fruit number 1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:04:37.690543"], ["updated_at", "2018-02-21 05:04:37.690543"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:04:37.707685"], ["updated_at", "2018-02-21 05:04:37.707685"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:04:37.708885"], ["updated_at", "2018-02-21 05:04:37.708885"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:04:37.709800"], ["updated_at", "2018-02-21 05:04:37.709800"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:04:37.714513"], ["updated_at", "2018-02-21 05:04:37.714513"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:04:37.716430"], ["updated_at", "2018-02-21 05:04:37.716430"], ["name", "Fruit number 1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:04:37.717767"], ["updated_at", "2018-02-21 05:04:37.717767"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:05:05.551873"], ["updated_at", "2018-02-21 05:05:05.551873"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:05:05.554140"], ["updated_at", "2018-02-21 05:05:05.554140"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:05:05.554987"], ["updated_at", "2018-02-21 05:05:05.554987"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:05:05.567599"], ["updated_at", "2018-02-21 05:05:05.567599"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:05:05.568618"], ["updated_at", "2018-02-21 05:05:05.568618"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:05:05.569332"], ["updated_at", "2018-02-21 05:05:05.569332"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:05:05.572525"], ["updated_at", "2018-02-21 05:05:05.572525"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:05:05.573504"], ["updated_at", "2018-02-21 05:05:05.573504"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:05:05.574313"], ["updated_at", "2018-02-21 05:05:05.574313"], ["name", "Fruit number 2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:01.339490"], ["updated_at", "2018-02-21 05:07:01.339490"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:01.341888"], ["updated_at", "2018-02-21 05:07:01.341888"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:01.342807"], ["updated_at", "2018-02-21 05:07:01.342807"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:01.357166"], ["updated_at", "2018-02-21 05:07:01.357166"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:01.358301"], ["updated_at", "2018-02-21 05:07:01.358301"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:01.359007"], ["updated_at", "2018-02-21 05:07:01.359007"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:01.362397"], ["updated_at", "2018-02-21 05:07:01.362397"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:01.363225"], ["updated_at", "2018-02-21 05:07:01.363225"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:01.363862"], ["updated_at", "2018-02-21 05:07:01.363862"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:12.166069"], ["updated_at", "2018-02-21 05:07:12.166069"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:12.168334"], ["updated_at", "2018-02-21 05:07:12.168334"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:12.169150"], ["updated_at", "2018-02-21 05:07:12.169150"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:12.183706"], ["updated_at", "2018-02-21 05:07:12.183706"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:12.184889"], ["updated_at", "2018-02-21 05:07:12.184889"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:12.185667"], ["updated_at", "2018-02-21 05:07:12.185667"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:12.188887"], ["updated_at", "2018-02-21 05:07:12.188887"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:12.189842"], ["updated_at", "2018-02-21 05:07:12.189842"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:07:12.190456"], ["updated_at", "2018-02-21 05:07:12.190456"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:08:37.210738"], ["updated_at", "2018-02-21 05:08:37.210738"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:08:37.214658"], ["updated_at", "2018-02-21 05:08:37.214658"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:08:37.216284"], ["updated_at", "2018-02-21 05:08:37.216284"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:08:37.237128"], ["updated_at", "2018-02-21 05:08:37.237128"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:08:37.239578"], ["updated_at", "2018-02-21 05:08:37.239578"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:08:37.240918"], ["updated_at", "2018-02-21 05:08:37.240918"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:08:37.246144"], ["updated_at", "2018-02-21 05:08:37.246144"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:08:37.247736"], ["updated_at", "2018-02-21 05:08:37.247736"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:08:37.248730"], ["updated_at", "2018-02-21 05:08:37.248730"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:09:21.449860"], ["updated_at", "2018-02-21 05:09:21.449860"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:09:21.452035"], ["updated_at", "2018-02-21 05:09:21.452035"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:09:21.453102"], ["updated_at", "2018-02-21 05:09:21.453102"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:09:21.467582"], ["updated_at", "2018-02-21 05:09:21.467582"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:09:21.468776"], ["updated_at", "2018-02-21 05:09:21.468776"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:09:21.469753"], ["updated_at", "2018-02-21 05:09:21.469753"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:09:21.473855"], ["updated_at", "2018-02-21 05:09:21.473855"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:09:21.475002"], ["updated_at", "2018-02-21 05:09:21.475002"], ["name", "Fruit number 1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:09:21.475997"], ["updated_at", "2018-02-21 05:09:21.475997"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.712798"], ["updated_at", "2018-02-21 05:14:55.712798"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.714913"], ["updated_at", "2018-02-21 05:14:55.714913"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.715705"], ["updated_at", "2018-02-21 05:14:55.715705"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.729705"], ["updated_at", "2018-02-21 05:14:55.729705"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.730693"], ["updated_at", "2018-02-21 05:14:55.730693"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.731406"], ["updated_at", "2018-02-21 05:14:55.731406"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.734623"], ["updated_at", "2018-02-21 05:14:55.734623"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.735471"], ["updated_at", "2018-02-21 05:14:55.735471"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.736112"], ["updated_at", "2018-02-21 05:14:55.736112"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.740468"], ["updated_at", "2018-02-21 05:14:55.740468"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.741423"], ["updated_at", "2018-02-21 05:14:55.741423"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:14:55.742305"], ["updated_at", "2018-02-21 05:14:55.742305"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 406 Not Acceptable in 26ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.565717"], ["updated_at", "2018-02-21 05:17:23.565717"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.567776"], ["updated_at", "2018-02-21 05:17:23.567776"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.568574"], ["updated_at", "2018-02-21 05:17:23.568574"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.582633"], ["updated_at", "2018-02-21 05:17:23.582633"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.583666"], ["updated_at", "2018-02-21 05:17:23.583666"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.584291"], ["updated_at", "2018-02-21 05:17:23.584291"], ["name", "Fruit number 2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.587847"], ["updated_at", "2018-02-21 05:17:23.587847"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.588766"], ["updated_at", "2018-02-21 05:17:23.588766"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.589433"], ["updated_at", "2018-02-21 05:17:23.589433"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.594056"], ["updated_at", "2018-02-21 05:17:23.594056"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.595090"], ["updated_at", "2018-02-21 05:17:23.595090"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:17:23.595809"], ["updated_at", "2018-02-21 05:17:23.595809"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.166230"], ["updated_at", "2018-02-21 05:18:27.166230"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.168395"], ["updated_at", "2018-02-21 05:18:27.168395"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.169161"], ["updated_at", "2018-02-21 05:18:27.169161"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.186805"], ["updated_at", "2018-02-21 05:18:27.186805"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.187985"], ["updated_at", "2018-02-21 05:18:27.187985"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.188779"], ["updated_at", "2018-02-21 05:18:27.188779"], ["name", "Fruit number 2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.193976"], ["updated_at", "2018-02-21 05:18:27.193976"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.195323"], ["updated_at", "2018-02-21 05:18:27.195323"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.196172"], ["updated_at", "2018-02-21 05:18:27.196172"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.201556"], ["updated_at", "2018-02-21 05:18:27.201556"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.202673"], ["updated_at", "2018-02-21 05:18:27.202673"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:27.203669"], ["updated_at", "2018-02-21 05:18:27.203669"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 406 Not Acceptable in 30ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.106303"], ["updated_at", "2018-02-21 05:18:39.106303"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.108282"], ["updated_at", "2018-02-21 05:18:39.108282"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.109137"], ["updated_at", "2018-02-21 05:18:39.109137"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.122772"], ["updated_at", "2018-02-21 05:18:39.122772"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.123959"], ["updated_at", "2018-02-21 05:18:39.123959"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.124752"], ["updated_at", "2018-02-21 05:18:39.124752"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.128504"], ["updated_at", "2018-02-21 05:18:39.128504"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.129426"], ["updated_at", "2018-02-21 05:18:39.129426"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.130073"], ["updated_at", "2018-02-21 05:18:39.130073"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.134331"], ["updated_at", "2018-02-21 05:18:39.134331"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.135391"], ["updated_at", "2018-02-21 05:18:39.135391"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:39.136160"], ["updated_at", "2018-02-21 05:18:39.136160"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 406 Not Acceptable in 42ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.806020"], ["updated_at", "2018-02-21 05:18:56.806020"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.808315"], ["updated_at", "2018-02-21 05:18:56.808315"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.809123"], ["updated_at", "2018-02-21 05:18:56.809123"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.825134"], ["updated_at", "2018-02-21 05:18:56.825134"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.826412"], ["updated_at", "2018-02-21 05:18:56.826412"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.827217"], ["updated_at", "2018-02-21 05:18:56.827217"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.831096"], ["updated_at", "2018-02-21 05:18:56.831096"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.832086"], ["updated_at", "2018-02-21 05:18:56.832086"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.832774"], ["updated_at", "2018-02-21 05:18:56.832774"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.838272"], ["updated_at", "2018-02-21 05:18:56.838272"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.839488"], ["updated_at", "2018-02-21 05:18:56.839488"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:18:56.840395"], ["updated_at", "2018-02-21 05:18:56.840395"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.223589"], ["updated_at", "2018-02-21 05:21:04.223589"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.225631"], ["updated_at", "2018-02-21 05:21:04.225631"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.226461"], ["updated_at", "2018-02-21 05:21:04.226461"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.240251"], ["updated_at", "2018-02-21 05:21:04.240251"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.241285"], ["updated_at", "2018-02-21 05:21:04.241285"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.241913"], ["updated_at", "2018-02-21 05:21:04.241913"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.246589"], ["updated_at", "2018-02-21 05:21:04.246589"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.247946"], ["updated_at", "2018-02-21 05:21:04.247946"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.248798"], ["updated_at", "2018-02-21 05:21:04.248798"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.255796"], ["updated_at", "2018-02-21 05:21:04.255796"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.256994"], ["updated_at", "2018-02-21 05:21:04.256994"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.257882"], ["updated_at", "2018-02-21 05:21:04.257882"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.261758"], ["updated_at", "2018-02-21 05:21:04.261758"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.263427"], ["updated_at", "2018-02-21 05:21:04.263427"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:04.264356"], ["updated_at", "2018-02-21 05:21:04.264356"], ["name", "Fruit number 2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.488319"], ["updated_at", "2018-02-21 05:21:48.488319"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.491190"], ["updated_at", "2018-02-21 05:21:48.491190"], ["name", "Fruit number 1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.492737"], ["updated_at", "2018-02-21 05:21:48.492737"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.508965"], ["updated_at", "2018-02-21 05:21:48.508965"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.510010"], ["updated_at", "2018-02-21 05:21:48.510010"], ["name", "Fruit number 1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.510727"], ["updated_at", "2018-02-21 05:21:48.510727"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.514325"], ["updated_at", "2018-02-21 05:21:48.514325"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.516145"], ["updated_at", "2018-02-21 05:21:48.516145"], ["name", "Fruit number 1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.517365"], ["updated_at", "2018-02-21 05:21:48.517365"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.522497"], ["updated_at", "2018-02-21 05:21:48.522497"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.523499"], ["updated_at", "2018-02-21 05:21:48.523499"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.524155"], ["updated_at", "2018-02-21 05:21:48.524155"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.527282"], ["updated_at", "2018-02-21 05:21:48.527282"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.528264"], ["updated_at", "2018-02-21 05:21:48.528264"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:21:48.529086"], ["updated_at", "2018-02-21 05:21:48.529086"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.157520"], ["updated_at", "2018-02-21 05:23:16.157520"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.159681"], ["updated_at", "2018-02-21 05:23:16.159681"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.160473"], ["updated_at", "2018-02-21 05:23:16.160473"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.174642"], ["updated_at", "2018-02-21 05:23:16.174642"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.175750"], ["updated_at", "2018-02-21 05:23:16.175750"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.176564"], ["updated_at", "2018-02-21 05:23:16.176564"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.180044"], ["updated_at", "2018-02-21 05:23:16.180044"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.180910"], ["updated_at", "2018-02-21 05:23:16.180910"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.181542"], ["updated_at", "2018-02-21 05:23:16.181542"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.186175"], ["updated_at", "2018-02-21 05:23:16.186175"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.187163"], ["updated_at", "2018-02-21 05:23:16.187163"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.187820"], ["updated_at", "2018-02-21 05:23:16.187820"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.191346"], ["updated_at", "2018-02-21 05:23:16.191346"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.193209"], ["updated_at", "2018-02-21 05:23:16.193209"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:23:16.194204"], ["updated_at", "2018-02-21 05:23:16.194204"], ["name", "Fruit number 2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.451616"], ["updated_at", "2018-02-21 05:24:34.451616"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.453497"], ["updated_at", "2018-02-21 05:24:34.453497"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.454226"], ["updated_at", "2018-02-21 05:24:34.454226"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.467837"], ["updated_at", "2018-02-21 05:24:34.467837"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.468853"], ["updated_at", "2018-02-21 05:24:34.468853"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.469574"], ["updated_at", "2018-02-21 05:24:34.469574"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.473032"], ["updated_at", "2018-02-21 05:24:34.473032"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.474150"], ["updated_at", "2018-02-21 05:24:34.474150"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.474934"], ["updated_at", "2018-02-21 05:24:34.474934"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.479118"], ["updated_at", "2018-02-21 05:24:34.479118"], ["name", "Fruit number 0"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.480173"], ["updated_at", "2018-02-21 05:24:34.480173"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.480838"], ["updated_at", "2018-02-21 05:24:34.480838"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.483972"], ["updated_at", "2018-02-21 05:24:34.483972"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.484873"], ["updated_at", "2018-02-21 05:24:34.484873"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:34.485772"], ["updated_at", "2018-02-21 05:24:34.485772"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.798302"], ["updated_at", "2018-02-21 05:24:42.798302"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.799653"], ["updated_at", "2018-02-21 05:24:42.799653"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.800379"], ["updated_at", "2018-02-21 05:24:42.800379"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered fruits/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.812826"], ["updated_at", "2018-02-21 05:24:42.812826"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.813863"], ["updated_at", "2018-02-21 05:24:42.813863"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.814520"], ["updated_at", "2018-02-21 05:24:42.814520"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.818345"], ["updated_at", "2018-02-21 05:24:42.818345"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.819439"], ["updated_at", "2018-02-21 05:24:42.819439"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.820169"], ["updated_at", "2018-02-21 05:24:42.820169"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.825059"], ["updated_at", "2018-02-21 05:24:42.825059"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.826068"], ["updated_at", "2018-02-21 05:24:42.826068"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.826829"], ["updated_at", "2018-02-21 05:24:42.826829"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.0ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.830820"], ["updated_at", "2018-02-21 05:24:42.830820"], ["name", "Fruit number 0"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.832059"], ["updated_at", "2018-02-21 05:24:42.832059"], ["name", "Fruit number 1"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "fruits" ("created_at", "updated_at", "name") VALUES (?, ?, ?)[0m  [["created_at", "2018-02-21 05:24:42.832967"], ["updated_at", "2018-02-21 05:24:42.832967"], ["name", "Fruit number 2"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by FruitsController#index as JSON
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m

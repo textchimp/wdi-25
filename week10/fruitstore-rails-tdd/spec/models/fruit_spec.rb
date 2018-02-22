@@ -33,6 +33,7 @@ RSpec.describe Fruit, type: :model do
 
     end
 
+
   end # describe Pear
 
 end

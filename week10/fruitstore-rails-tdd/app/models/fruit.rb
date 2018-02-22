@@ -6,6 +6,8 @@ class Fruit < ApplicationRecord
     false
   end
 
+  validates :name, presence: true
+
 end
 
 # Make use of Rails Single Table Inheritance to share the 'fruits' table

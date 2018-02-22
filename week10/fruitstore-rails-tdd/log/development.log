@@ -480,3 +480,27 @@ puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.2) lib/puma/server.rb:438:in `process_client'
 puma (3.11.2) lib/puma/server.rb:302:in `block in run'
 puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-21 23:07:03 +1100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fruits" for 127.0.0.1 at 2018-02-21 23:07:09 +1100
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.3ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 161ms (Views: 133.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/fruits" for 127.0.0.1 at 2018-02-21 23:07:30 +1100
+Processing by FruitsController#index as HTML
+  [1m[36mFruit Load (0.3ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  Rendering fruits/index.html.erb within layouts/application
+  Rendered fruits/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+

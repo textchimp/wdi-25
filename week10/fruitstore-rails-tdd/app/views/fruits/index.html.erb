@@ -1,1 +1,9 @@
-Hi! (fruits#index)
+<div>
+  <h1>Fruits Index</h1>
+
+  <ul>
+    <% @fruits.each do |fruit| %>
+      <li class="item"><%= fruit.name %></li>
+    <% end %>
+  </ul>
+</div>

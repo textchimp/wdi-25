@@ -6,7 +6,7 @@ RSpec.describe FruitsController, type: :controller do
 
     before do
       3.times { |i|  Fruit.create name: "Fruit number #{ i }"  }
-    end
+      end
 
     describe 'as HTML' do
 
@@ -48,14 +48,52 @@ RSpec.describe FruitsController, type: :controller do
 
       end
 
+    end  # JSON
 
+  end # describe GET /fruits
+
+
+
+
+  describe "POST to /fruits (fruits#create)" do
+
+    describe "a fruit with valid information" do
+
+      before do
+        post :create, params: { fruit: { name: 'Strawberry' } }
+      end
+
+      it 'should redirect to the show action' do
+        expect( response ).to redirect_to( Fruit.last )
+      end
+
+      it 'should increase the number of fruits in the database' do
+        expect( Fruit.count ).to eq 1
+      end
+
+      it 'should save the correct name of the fruit' do
+        expect( Fruit.first.name ).to eq 'Strawberry'
+      end
 
     end
 
+    describe "a fruit with invalid information" do
 
+      before do
+        post :create, params: { fruit: { name: '' } }
+      end
 
+      it 'should not increase of fruits in the DB' do
+        expect( Fruit.count ).to eq 0
+      end
 
-  end
+      it 'should rerender the #new template' do
+        expect( response ).to render_template(:new)
+      end
+
+    end
+
+  end # describe POST /fruits
 
 
 end

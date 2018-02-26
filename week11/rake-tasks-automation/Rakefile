@@ -1,0 +1,55 @@
+namespace :morning do
+
+  desc "Turn off the alarm"
+  task :turn_off_alarm do
+    puts "(:turn_off_alarm)"
+    puts "Turn off the stupid alarm and drag your carcass out of bed for another gruelling day of students"
+  end
+
+  desc "Make myself a fancy man"
+  task :groom_self do
+    puts "(:groom_self)"
+    puts "Brush teeth"
+    puts "Butter armpits"
+    puts "Wax beard"
+  end
+
+  desc "Walk the cat"
+  task :walk_cat do
+    puts "(:walk_cat)"
+    puts "Walk the cat, why does it always resist the daily walk"
+  end
+
+  desc "Make some coffee"
+  task :make_coffee do
+    cups = ENV['COFFEE_CUPS'] || 2
+    puts "(:make_coffee)"
+    puts "Make #{ cups } cup(s) of coffee"
+    if ENV['EAT']
+      puts "Have breakfast"
+    end
+  end
+
+  desc "Get ready for another exciting day at the student coalface"
+  task :get_ready => [:turn_off_alarm, :make_coffee, :groom_self, :walk_cat] do
+    puts "Ready to leave the house!"
+  end
+
+end  # :morning
+
+namespace :morning do
+  task :groom_self do
+    puts "Shave eyebrows"
+  end
+end
+
+namespace :afternoon do
+  desc "Make special afternoon coffee to ease out of the day"
+  task :make_coffee do
+    Rake::Task['morning:make_coffee'].invoke
+    puts "Add some bourbon" 
+  end
+end
+
+
+task default: 'morning:groom_self'

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TweetStreamer</title>
+
+  <style>
+    img {
+      max-width: 150px;
+      max-height: 150px;
+    }
+  </style>
+
+  <script src="/jquery.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+     const socket = io.connect('http://localhost:3000');
+     socket.on('news', data => {
+       console.log('got websocket message "news":', data);
+     });
+
+    socket.on('tweet', data => {
+      // console.log(data);
+
+      // check if image URLS are present in this tweet
+      if( data.extended_entities && data.extended_entities.media.length > 0){
+
+        data.extended_entities.media.forEach( item => {
+          let $link = $('<a>', { target: '_blank', href: item.media_url });
+          $('<img>', { src: item.media_url }).appendTo($link);
+          $link.prependTo('#tweets');
+        });
+
+      }
+
+      // $('<p>', {html:  `${data.text} (${ data.user.screen_name })`}).prependTo('#tweets');
+
+    });
+
+
+  </script>
+</head>
+<body>
+  <h1>TweetStreeeeeeeeeeeeeeeeamer</h1>
+  <div id="tweets"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(59, 84, 161);
+  text-align: center;
+  color: rgb(255, 139, 205);
+  font-family: Verdana, sans-serif;
+}
+
+.repos a{
+  color: rgb(59, 255, 0);
+}
+
+.profile, .repos {
+  text-align: left;
+  display: inline-block;
+  max-width: 50%;
+  border: 1px solid black;
+  padding: 1em;
+  margin: 0.5em;
+  vertical-align: top;
+}

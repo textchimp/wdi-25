@@ -5,10 +5,10 @@ const io = require('socket.io')(server);
 
 const Twitter = require('twitter');
 const client = new Twitter({
-  consumer_key: 'arbzhOfi37NtXwXxbbm6nUDRo',
-  consumer_secret: 'UlRxfvXA6ZFNgCuXZDr72tD1eDTKUn2HhGEyeNamsyIyjCXDjS',
-  access_token_key: '635341232-cj8WFZYn6qBpZNutCsi4iaS7B4alQGGxwyggwRyK',
-  access_token_secret: 'ZkOAA3aRdFtXMcLXvYnH1l15n8cEIBoDOOEDDRUiHzX1g'
+  consumer_key: '',
+  consumer_secret: '',
+  access_token_key: '',
+  access_token_secret: ''
 });
 
 app.use( express.static('public') );

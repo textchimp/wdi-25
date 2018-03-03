@@ -33,9 +33,7 @@ export default class SearchResults extends Component {
     this.props.history.push(`/movie/${ id }`);
   }
 
-  componentWillMount(){
-    console.log('SearchResults');
-
+  getResults(){
     MovieAPI.getMovieSearchResults( this.props.match.params.query )
     .then( results => this.setState({
       results: results.data.results,
@@ -43,7 +41,24 @@ export default class SearchResults extends Component {
       totalPages: results.data.total_pages
     }))
     .catch( error => console.error('API query error') );
+  }
 
+  componentDidUpdate( prevProps, prevState ){
+    console.log('componentDidUpdate()');
+    // INFINITE LOOP GOTCHA! If we run code in componentDidUpdate() which causes a setState(),
+    // we will get stuck in an infinite loop of setState() -> componentDidUpdate() -> setState()
+    // ...so we need to make sure not to keep setting state if nothing important has changed
+    if( prevProps.match.url === this.props.match.url ){
+      return;
+    }
+
+    this.setState({ results: [] });  // clear the old results, causing "Loading..." to display
+    this.getResults();
+  }
+
+  componentWillMount(){
+    console.log('SearchResults');
+    this.getResults();
   }
 
   render(){

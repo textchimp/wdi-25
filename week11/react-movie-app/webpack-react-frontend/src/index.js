@@ -1,22 +1,38 @@
 console.log('hello cruel wœrld');
 
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
+import axios from 'axios';
+
 import Search from './components/Search';
-import SearchResults from './components/SearchResults';
+import Login from './components/Login';
 import MovieDetails from './components/MovieDetails';
 
-const Routes = (
-  <Router>
-    <div className="container">
-      <h1>Movie Database App: Movir</h1>
-       <Route exact path="/" component={ Search } />
-       <Route path="/search/:query" component={ SearchResults } />
-       <Route path="/movie/:id" component={ MovieDetails } />
-    </div>
-  </Router>
-);
+class App extends Component {
 
-ReactDOM.render( Routes, document.getElementById('app') );
+  componentWillMount(){
+    const token = localStorage.getItem('authToken');
+    if( token ){
+      axios.defaults.headers.common['Authorization'] = 'JWT ' + token;
+    }
+  }
+
+  render(){
+    return (
+      <Router>
+        <div className="container">
+          <h1>Movie Database App: Movir</h1>
+           <Route exact path="/" component={ Search } />
+           <Route path="/search" component={ Search } />
+           <Route path="/login" component={ Login } />
+           <Route path="/movie/:id" component={ MovieDetails } />
+        </div>
+      </Router>
+    )
+  }
+
+}
+
+ReactDOM.render(<App/>, document.getElementById('app') );

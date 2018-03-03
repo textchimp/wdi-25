@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
+import axios from 'axios';
+
 import SearchResults from './SearchResults';
 
 export default class Search extends Component {
@@ -21,12 +23,20 @@ export default class Search extends Component {
     console.log('sumbmit');
     // route to search results page: /search/keyword
 
-    this.props.history.push(`/search/${ this.state.query }`);
+    this.props.history.push(`${ this.props.match.url }/${ this.state.query }`);
 
   }
 
   _handleChange(e){
     this.setState({ query: e.target.value });
+  }
+
+  componentWillMount(){
+    console.log('Search componentWillMount()');
+
+    axios.get('http://localhost:3000/seekrit')
+    .then( response => console.log('/users response:', response) );
+
   }
 
   render(){
@@ -38,9 +48,13 @@ export default class Search extends Component {
         <button>Search</button>
       </form>
       <br />
-      {/* }<Route path={`${this.props.match.url}/:query`} component={ SearchResults } /> */ }
+      <Route path={`${ this.props.match.url }/:query`} component={ SearchResults } />
       </div>
     );
   }
 
 }
+
+const Checker = function(props){
+  return <h4>CHECK</h4>;
+};

@@ -1,10 +1,13 @@
-.container{
-  display: inline-block;
+#app {
   width: 80vw;
+  margin: 0 auto;
 }
 
 body{
   margin: 0 auto;
+  color: rgb(218, 244, 255);
+  background-color: #000;
+  font-family: Helvetica;
 }
 
 .poster-thumbnail{
